@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/notification_db
+    username: YOUR_DB_USERNAME
+    password: YOUR_DB_PASSWORD
+
+  mail:
+    host: smtp-relay.brevo.com
+    port: 587
+    username: YOUR_BREVO_EMAIL
+    password: YOUR_BREVO_SMTP_KEY
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+
+notification:
+  email:
+    from: YOUR_VERIFIED_SENDER_EMAIL
+    from-name: Notification Service

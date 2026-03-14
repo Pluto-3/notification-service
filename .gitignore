@@ -19,6 +19,9 @@ target/
 *.iml
 *.ipr
 
+# Environment - do not commit
+src/main/resources/application.yml
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
