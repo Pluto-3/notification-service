@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; }
+        .container { max-width: 600px; margin: 40px auto; background: #fff; border-radius: 8px; padding: 32px; }
+        .header { font-size: 22px; font-weight: bold; color: #333; margin-bottom: 16px; }
+        .badge { display: inline-block; background: #6366f1; color: white; padding: 6px 16px;
+                 border-radius: 20px; font-size: 13px; margin-bottom: 20px; }
+        .body-text { font-size: 15px; color: #555; line-height: 1.6; }
+        .code-box { background: #f1f5f9; border-radius: 6px; padding: 12px 20px; margin: 20px 0;
+                    font-family: monospace; font-size: 18px; letter-spacing: 2px; color: #1e293b; }
+        .footer { margin-top: 32px; font-size: 12px; color: #aaa; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">Your Document is Ready</div>
+    <div class="badge">ISSUED</div>
+    <div class="body-text">
+        <p>Hi <strong th:text="${name}">User</strong>,</p>
+        <p>Your document <strong th:text="${documentName}">document</strong> has been issued by <strong th:text="${issuedBy}">issuer</strong>.</p>
+        <p>Your verification code:</p>
+        <div class="code-box" th:text="${verificationCode}">TZ-EDU-00000</div>
+        <p>Anyone can verify this document using the code above.</p>
+    </div>
+    <div class="footer">This is an automated message. Please do not reply.</div>
+</div>
+</body>
+</html>

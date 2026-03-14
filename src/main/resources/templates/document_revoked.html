@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; }
+        .container { max-width: 600px; margin: 40px auto; background: #fff; border-radius: 8px; padding: 32px; }
+        .header { font-size: 22px; font-weight: bold; color: #333; margin-bottom: 16px; }
+        .badge { display: inline-block; background: #ef4444; color: white; padding: 6px 16px;
+                 border-radius: 20px; font-size: 13px; margin-bottom: 20px; }
+        .body-text { font-size: 15px; color: #555; line-height: 1.6; }
+        .footer { margin-top: 32px; font-size: 12px; color: #aaa; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">Document Revoked</div>
+    <div class="badge">REVOKED</div>
+    <div class="body-text">
+        <p>Hi <strong th:text="${name}">User</strong>,</p>
+        <p>Your document <strong th:text="${documentName}">document</strong> has been revoked.</p>
+        <p>Reason: <strong th:text="${reason}">reason</strong></p>
+        <p>If you believe this is an error, please contact the issuing authority.</p>
+    </div>
+    <div class="footer">This is an automated message. Please do not reply.</div>
+</div>
+</body>
+</html>
