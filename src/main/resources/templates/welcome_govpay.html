@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Welcome to GovPay</title>
+    <style>
+        body { margin: 0; padding: 0; background-color: #f4f4f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        .wrapper { max-width: 600px; margin: 40px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+        .header { background-color: #1a1a2e; padding: 36px 40px; text-align: center; }
+        .header h1 { margin: 0; color: #ffffff; font-size: 24px; font-weight: 600; letter-spacing: -0.3px; }
+        .header p { margin: 6px 0 0; color: #a0a0b8; font-size: 14px; }
+        .body { padding: 40px; }
+        .greeting { font-size: 18px; font-weight: 600; color: #1a1a2e; margin: 0 0 12px; }
+        .text { font-size: 15px; color: #4a4a6a; line-height: 1.7; margin: 0 0 24px; }
+        .feature-grid { display: grid; gap: 12px; margin: 0 0 32px; }
+        .feature { background: #f8f8fb; border-radius: 8px; padding: 16px 20px; border-left: 3px solid #4f46e5; }
+        .feature-title { font-size: 14px; font-weight: 600; color: #1a1a2e; margin: 0 0 4px; }
+        .feature-desc { font-size: 13px; color: #6b6b8a; margin: 0; }
+        .cta { text-align: center; margin: 32px 0; }
+        .cta a { background: #4f46e5; color: #ffffff; text-decoration: none; padding: 14px 36px; border-radius: 8px; font-size: 15px; font-weight: 500; display: inline-block; }
+        .footer { background: #f8f8fb; padding: 24px 40px; text-align: center; border-top: 1px solid #ebebf0; }
+        .footer p { margin: 0; font-size: 12px; color: #9090a8; line-height: 1.6; }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <h1>GovPay</h1>
+        <p>Digital Wallet &amp; Government Payments</p>
+    </div>
+    <div class="body">
+        <p class="greeting">Welcome, <span th:text="${name}">User</span>!</p>
+        <p class="text">Your GovPay account has been created successfully. You now have access to Tanzania's digital payment platform for government services, utility bills, and peer-to-peer transfers.</p>
+
+        <div class="feature-grid">
+            <div class="feature">
+                <p class="feature-title">Digital Wallet</p>
+                <p class="feature-desc">Top up your wallet and make instant payments from anywhere.</p>
+            </div>
+            <div class="feature">
+                <p class="feature-title">Utility Bills</p>
+                <p class="feature-desc">Pay DAWASCO, TANESCO, TRA, and more in seconds.</p>
+            </div>
+            <div class="feature">
+                <p class="feature-title">P2P Transfers</p>
+                <p class="feature-desc">Send money to other GovPay users instantly.</p>
+            </div>
+        </div>
+
+        <p class="text">To get started, create your wallet and complete identity verification (KYC) to unlock all features.</p>
+
+        <div class="cta">
+            <a href="#">Get Started</a>
+        </div>
+
+        <p class="text" style="font-size:13px;color:#9090a8;">If you did not create this account, please ignore this email or contact support immediately.</p>
+    </div>
+    <div class="footer">
+        <p>GovPay &mdash; Simplifying Government Payments in Tanzania<br/>
+            This is an automated message, please do not reply directly to this email.</p>
+    </div>
+</div>
+</body>
+</html>
