@@ -7,6 +7,13 @@ spring:
     username: YOUR_DB_USERNAME
     password: YOUR_DB_PASSWORD
 
+   jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
   mail:
     host: smtp-relay.brevo.com
     port: 587
